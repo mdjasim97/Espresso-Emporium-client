@@ -1,8 +1,8 @@
 
 
-const Feather = () => {
+const Feature = () => {
   return (
-    <div className="bg-[#ECEAE3] grid grid-cols-1 md:grid-cols-4 py-8 px-4 md:px-72 border-2 border-red-700 gap-10">
+    <div className="bg-[#ECEAE3] grid grid-cols-1 md:grid-cols-4 py-8 px-4 md:px-72 gap-10">
       <div className="items-center space-y-3 ">
         <img src="images/icons/1.png" alt="" />
         <h3 className="font-rancho text-4xl">Awesome Aroma</h3>
@@ -30,4 +30,4 @@ const Feather = () => {
   );
 };
 
-export default Feather;
+export default Feature;

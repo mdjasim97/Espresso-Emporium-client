@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from 'react';
+
 import { FaEye } from "react-icons/fa";
 import { MdEdit, MdDelete } from "react-icons/md";
-import { Link, useLoaderData, useParams } from 'react-router-dom';
+import { Link} from 'react-router-dom';
 import Swal from 'sweetalert2';
 
-const CoffeeCard = ({ coffee, coffees, setCoffees }) => {
-    // console.log(coffee)
+const CoffeeCard = ({ coffee}) => {
+    console.log(coffee)
 
     const { _id, name, quantity, supplier, taste, photo } = coffee;
 
@@ -50,7 +50,7 @@ const CoffeeCard = ({ coffee, coffees, setCoffees }) => {
 
 
     return (
-        <div className='m-2'>
+        <div className='m-2 p-2'>
 
             <div className="card card-side bg-[#F5F4F1] shadow-xl lg:p-5">
                 <figure>
@@ -64,10 +64,10 @@ const CoffeeCard = ({ coffee, coffees, setCoffees }) => {
                         <p className='lg:text-2xl font-semibold'>Price : {coffee.price} Tk</p>
                     </div>
 
-                    <div className="join join-vertical">
-                        <button className='btn border-0 bg-[#F5F4F1] join-item'><FaEye className='text-2xl' /> </button>
-                        <Link to={`updateCoffee/${coffee._id}`} className='btn border-0 bg-[#F5F4F1] join-item'><MdEdit className='text-2xl' /></Link>
-                        <button onClick={() => handleDelete(coffee._id)} className='btn border-0 bg-[#F5F4F1] join-item'><MdDelete className='text-2xl' /></button>
+                    <div className="join join-vertical gap-4">
+                        <button className='btn border-0 bg-[#D2B48C] join-item'><FaEye className='text-white text-2xl' /> </button>
+                        <Link to={`updateCoffee/${coffee._id}`} className='btn border-0 bg-[#3C393B] text-white join-item'><MdEdit className='text-2xl' /></Link>
+                        <button onClick={() => handleDelete(coffee._id)} className='btn border-0 bg-[#EA4744] text-white join-item'><MdDelete className='text-2xl' /></button>
                     </div>
 
 

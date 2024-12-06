@@ -1,11 +1,17 @@
 import Banner from "../component/Banner";
-import Feather from "../component/Feather";
+import Coffee from "../component/Coffee";
+import Feature from "../component/Feature";
+import Follow from "../component/Follow";
+import Footer from "../component/Footer";
 
 const HomePage = () => {
   return (
     <div>
       <Banner/>
-      <Feather/>
+      <Feature/>
+      <Coffee/>
+      <Follow/>
+      <Footer/>
     </div>
   );
 };

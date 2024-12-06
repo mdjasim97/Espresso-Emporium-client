@@ -1,32 +1,38 @@
 import { useLoaderData } from "react-router-dom";
 import Title from "./Title";
 import { useEffect, useState } from "react";
-import CoffeeCard from "./CoffeeCard"
-
+import CoffeeCard from "./CoffeeCard";
 
 const Coffee = () => {
-    const [coffee, setCoffee] = useState([])
+  const [coffeeCard, setCoffeeCard] = useState([]);
 
-    useEffect(() => {
-        fetch("http://localhost:4000/coffee")
-            .then(res => res.json())
-            .then(data => setCoffee(data))
-    }, [])
+  useEffect(() => {
+    fetch("http://localhost:4000/coffee")
+      .then((res) => res.json())
+      .then((data) => setCoffeeCard(data));
+  }, []);
 
-    return (
-        <div className="md:w-4/5 mx-auto">
-            <Title subTitle="--- Sip & Savor ---" title="Our Popular Products" btn="Add Coffee"/>
+  const onDeleteCoffee = (id) => {
+    setCoffeeCard(coffeeCard.filter((coffee) => coffee._id !== id));
+  };
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-                {
-                    coffee.map(coffee => <CoffeeCard
-                        key={coffee._id}
-                        coffee={coffee}
-                    ></CoffeeCard>)
-                }
-            </div>
+  return (
+    <div className="bg-[url('../../images/more/1.png')] my-20">
+      <div className="md:w-4/5 mx-auto">
+        <Title
+          subTitle="--- Sip & Savor ---"
+          title="Our Popular Products"
+          btn="Add Coffee"
+        />
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+          {coffeeCard.map((coffee) => (
+            <CoffeeCard key={coffee._id} coffeeItem={coffee} onDeleteCoffee={onDeleteCoffee}></CoffeeCard>
+          ))}
         </div>
-    );
+      </div>
+    </div>
+  );
 };
 
 export default Coffee;

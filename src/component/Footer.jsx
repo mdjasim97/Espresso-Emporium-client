@@ -4,10 +4,10 @@ import { MdEmail } from "react-icons/md";
 
 const Footer = () => {
   return (
-    <div className="flex justify-center items-center gap-5 mt-10 bg-[url('./images/more/13.jpg')]">
+    <div className="flex flex-col justify-center items-center gap-5 mt-10 bg-[url('../../images/more/13.jpg')]">
       <div className="flex flex-col md:flex-row items-center justify-center gap-10 w-4/5 mx-auto py-10">
         <div className="flex-1 space-y-5 ">
-          <img src="./images/more/logo1.png" alt="" className="w-24 h-24" />
+          <img src="../../images/more/logo1.png" alt="" className="w-24 h-24" />
           <h3 className="font-rancho text-5xl text-[#331A15] drop-shadow-xl">
             Espresso Emporium
           </h3>
@@ -34,6 +34,7 @@ const Footer = () => {
             <textarea type="text" placeholder="Message" className="input resize-none h-40 focus:outline-none focus:border-none w-full" />
             <button className="btn rounded-full px-10 text-xl bg-transparent border-2 border-[#331A15] hover:text-white hover:bg-[#E3B577] md:text-2xl font-rancho">Send Message</button>
         </div>
+        
       </div>
     </div>
   );

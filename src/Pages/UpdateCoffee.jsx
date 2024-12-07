@@ -44,12 +44,12 @@ const UpdateCoffee = () => {
   };
 
   return (
-    <div className="bg-[url('../../images/more/11.png')] bg-no-repeat m-20">
-      <div className=" w-4/5 mx-auto  p-24 bg-[#F4F3F0] space-y-5">
+    <div className="bg-[url('../../images/more/11.png')] bg-no-repeat m-5 md:m-20">
+      <div className=" md:w-4/5 mx-auto p-4 md:p-24 bg-[#F4F3F0] space-y-5">
         <h3 className="font-rancho text-center text-5xl drop-shadow-xl text-[#374151] ">
           Update Existing Coffee Details
         </h3>
-        <p className="font-raleway text-lg w-2/3 mx-auto">
+        <p className="font-raleway text-lg md:w-2/3 mx-auto">
           It is a long established fact that a reader will be distraceted by the
           readable content of a page when looking at its layout. The point of
           using Lorem Ipsum is that it has a more-or-less normal distribution of
@@ -57,7 +57,7 @@ const UpdateCoffee = () => {
         </p>
         <div>
           <form onSubmit={handleUpdateCoffee}>
-            <div className="flex w-full gap-5">
+            <div className="flex flex-col md:flex-row w-full gap-5">
               <div className="flex-1">
                 <label className="label text-xl">Coffee Name</label>
                 <input
@@ -81,7 +81,7 @@ const UpdateCoffee = () => {
               </div>
             </div>
 
-            <div className="flex w-full gap-5">
+            <div className="flex flex-col md:flex-row w-full gap-5">
               <div className="flex-1">
                 <label className="label text-xl">Supplier</label>
                 <input
@@ -105,7 +105,7 @@ const UpdateCoffee = () => {
               </div>
             </div>
 
-            <div className="flex w-full gap-5">
+            <div className="flex flex-col md:flex-row w-full gap-5">
               <div className="flex-1">
                 <label className="label text-xl">Category</label>
                 <input
@@ -129,7 +129,7 @@ const UpdateCoffee = () => {
               </div>
             </div>
 
-            <div className="flex w-full gap-5">
+            <div className="flex flex-col md:flex-row w-full gap-5">
               <div className="flex-1">
                 <label className="label text-xl">Price</label>
                 <input

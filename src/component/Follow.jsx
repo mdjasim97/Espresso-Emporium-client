@@ -2,7 +2,7 @@ import Title from "./Title";
 
 const Follow = () => {
   return (
-    <div className="w-4/5 mx-auto">
+    <div className="md:w-4/5 p-2 mx-auto">
       <Title subTitle="Follow Us Now" title="Follow on Instagram" />
 
       <div className="grid grid-cols-1 md:grid-cols-4 gap-5">

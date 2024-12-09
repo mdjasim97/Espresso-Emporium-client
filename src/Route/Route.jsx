@@ -18,7 +18,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <HomePage />,
-        loader: () => fetch("http:localhost:4000/coffee"),
+        loader: () => fetch("https://y-two-puce.vercel.app/coffee"),
       },
 
       {
@@ -35,7 +35,7 @@ const router = createBrowserRouter([
         path: "/coffeeDetails/:id",
         element: <CoffeeDetails />,
         loader: ({ params }) =>
-          fetch(`http://localhost:4000/coffee/${params.id}`),
+          fetch(`https://y-two-puce.vercel.app/coffee/${params.id}`),
       },
 
       {
@@ -45,7 +45,7 @@ const router = createBrowserRouter([
       {
         path: "/updateCoffee/:id",
         element: <UpdateCoffee />,
-        loader: ({ params }) => fetch(`http://localhost:4000/coffee/${params.id}`),
+        loader: ({ params }) => fetch(`https://y-two-puce.vercel.app/coffee/${params.id}`),
       }
     ],
   },

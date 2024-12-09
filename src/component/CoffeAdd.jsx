@@ -17,8 +17,8 @@ const CoffeAdd = () => {
 
         const coffe = { name, quantity, suplyer, catagory, price, photo }
         console.log(coffe)
-        // http://localhost:4000/
-        fetch("http://localhost:4000/addcoffe", {
+        // https://y-two-puce.vercel.app/
+        fetch("https://y-two-puce.vercel.app/addcoffe", {
             method: "POST",
             headers: { "content-type": "application/json" },
             body: JSON.stringify(coffe)

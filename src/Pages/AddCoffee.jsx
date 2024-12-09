@@ -26,7 +26,7 @@ const AddCoffee = () => {
     form.reset();
     console.log(newCoffee);
 
-    fetch("http://localhost:4000/addcoffee", {
+    fetch("https://y-two-puce.vercel.app/addcoffee", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(newCoffee),

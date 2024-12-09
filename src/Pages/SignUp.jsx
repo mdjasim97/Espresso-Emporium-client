@@ -23,7 +23,7 @@ const SignUp = () => {
         // User Create
         const createAt = result.user?.metadata?.creationTime;
         const user = { name, email, createAt };
-        fetch("http://localhost:4000/users", {
+        fetch("https://y-two-puce.vercel.app/users", {
           method: "post",
           headers: {
             "content-type": "application/json",

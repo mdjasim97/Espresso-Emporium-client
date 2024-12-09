@@ -21,7 +21,7 @@ const UserUpdate = () => {
         
 
 
-        fetch(`http://localhost:4000/users/${getUpdateUser._id}`,{
+        fetch(`https://y-two-puce.vercel.app/users/${getUpdateUser._id}`,{
             method : "PUT",
             headers : {
                 "content-type" : "application/json"

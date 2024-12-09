@@ -13,7 +13,7 @@ const Users = () => {
     const handledeleteUser = (id) => {
         console.log("Delete Use id ", id)
 
-        fetch(`http://localhost:4000/users/${id}`, {
+        fetch(`https://y-two-puce.vercel.app/users/${id}`, {
             method: "delete"
         })
             .then(res => res.json())

@@ -32,7 +32,7 @@ const UpdateCoffee = () => {
     console.log(updateCoffeeInfo);
     console.log(_id);
 
-    fetch(`http://localhost:4000/updateCoffee/${_id}`, {
+    fetch(`https://y-two-puce.vercel.app/updateCoffee/${_id}`, {
       method: "put",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(updateCoffeeInfo),

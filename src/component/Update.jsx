@@ -1,4 +1,4 @@
-import React from 'react';
+
 import Swal from 'sweetalert2'
 import { useLoaderData, useNavigate } from 'react-router-dom';
 
@@ -24,7 +24,7 @@ const Update = () => {
         const coffe = { name, quantity, suplyer, catagory, price, photo }
         console.log(coffe)
 
-        fetch(`http://localhost:4000/updateCoffee/${_id}`, {
+        fetch(`https://y-two-puce.vercel.app/updateCoffee/${_id}`, {
             method: "put",
             headers: { "content-type": "application/json" },
             body: JSON.stringify(coffe)
@@ -49,8 +49,6 @@ const Update = () => {
     return (
 
         <div>
-
-            <Headers></Headers>
             <div className='bg-base-200 lg:min-h-screen lg:flex lg:flex-col lg:justify-center lg:items-center font-["rancho"]'>
 
 

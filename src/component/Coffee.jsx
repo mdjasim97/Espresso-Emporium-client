@@ -7,7 +7,7 @@ const Coffee = () => {
   const [coffeeCard, setCoffeeCard] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:4000/coffee")
+    fetch("https://y-two-puce.vercel.app/coffee")
       .then((res) => res.json())
       .then((data) => setCoffeeCard(data));
   }, []);
